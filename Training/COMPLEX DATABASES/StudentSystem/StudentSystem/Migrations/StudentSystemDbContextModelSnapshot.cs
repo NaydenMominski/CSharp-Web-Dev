@@ -38,7 +38,7 @@ namespace StudentSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Course");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("StudentSystem.Data.Homework", b =>
@@ -46,10 +46,10 @@ namespace StudentSystem.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CourseId");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Content")
                         .IsRequired();
+
+                    b.Property<int>("CourseId");
 
                     b.Property<int>("StudentId");
 
@@ -63,7 +63,7 @@ namespace StudentSystem.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Homework");
+                    b.ToTable("Homeworks");
                 });
 
             modelBuilder.Entity("StudentSystem.Data.Resourse", b =>
@@ -85,7 +85,7 @@ namespace StudentSystem.Migrations
 
                     b.HasIndex("CousesId");
 
-                    b.ToTable("Resourse");
+                    b.ToTable("Resourses");
                 });
 
             modelBuilder.Entity("StudentSystem.Data.Student", b =>
@@ -104,7 +104,7 @@ namespace StudentSystem.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Student");
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("StudentSystem.Data.StudentCourse", b =>

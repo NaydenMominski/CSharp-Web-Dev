@@ -8,7 +8,7 @@ namespace StudentSystem.Data
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Content { get; set; }
 
         public ContentType Type { get; set; }
 
